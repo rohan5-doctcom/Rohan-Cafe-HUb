@@ -1,0 +1,299 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+}
+body{
+background-color: #f8fafc;
+
+}
+.container .navbar{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 13vh;
+    width:90%;
+    margin:auto;
+}
+.navbar .navlist{
+display: flex;
+gap:2.8rem;
+}
+.navbar .logo{
+font-size: 2rem;
+color: #58a803;
+font-weight: bold;
+}
+.navlist li{
+    list-style: none;
+}
+.navlist a{
+    text-decoration:none;
+    color:black;
+    font-size:1.1rem;
+    position:relative;
+
+}
+.navlist a::after, .navlist .active::after{
+    content:"";
+    position:absolute;
+    bottom:-5px;
+    top: 0;
+    left:0;
+    background-color:#84b74e;
+    height:.25rem;
+    width: 0%;
+    border-radius: 2rem;
+    transition: .5s ease-in-out;
+    
+   
+}
+.navlist a:hover::after,.navlist .active::after{
+    width: 50%;
+}
+.icons .fa-solid{
+font-size: 1.3rem;
+background-color: white;
+padding:.5rem;
+border-radius: .3rem;
+margin-right:1rem;
+
+}
+.icons button{
+    font-size: 1rem;
+    border: none;
+    background-color: white;
+    padding:.5rem 1.5rem;
+    border-radius:5rem;
+
+}
+.icons .fa-solid:hover, .icons button:hover{
+    background-color: #84b74e;
+    cursor: pointer;
+
+}
+.container .circle{
+    background-color: #58a803;
+    position:absolute;
+    width:100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(650px at right top);
+
+
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:calc(100vh-13vh);
+    width: 90%;
+    margin:auto;
+}
+.img_box img{
+    height:35rem;
+}
+
+.content{
+    display: flex;
+    left:0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-height: 40rem;
+}
+.content h3{
+    font-size: 1.2rem;
+    background-color:rgba(0,0,0,0.581) ;
+    color: white;
+    padding: .5rem 1rem;
+    letter-spacing: .3rem;
+}
+.content h1{
+    font-size: 3.3rem;
+    margin-top: 1.5rem;
+   letter-spacing: .03rem;
+
+
+}
+.content span{
+    background-color: #58a803;
+    padding: .2rem 1rem;
+    color:white;
+
+}
+.content p{
+    font-size: 1.1rem;
+    color:rgba(0,0,0,0.581);
+    margin:1rem 0;
+    line-height: 2rem;
+    max-width: 33rem;
+   
+    
+}
+.content button{
+    font-size: 1.2rem;
+    border:none;
+   border-radius: 5rem;
+   background-color: #84b74e;
+   color:white;
+   padding: 1rem 2rem;
+   letter-spacing: .05rem;
+}
+.content button:hover{
+    background-color: #58a803;
+    cursor: pointer;
+}
+.hamburger{
+    cursor: pointer;
+    display: none;
+}
+.hamburger .line{
+background-color: black;
+height:.25rem;
+width: 2.5rem;
+margin:.3rem;
+border-radius: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and(max-width:1200px){
+.img_box img{
+    height:30rem;
+}
+}
+@media screen and(max-width:1020px){
+    .img_box img{
+        height: 25rem;
+    }
+    .content h3{
+        font-size: 1rem;
+    }
+    .content h1{
+        font-size:2.8rem;
+    }
+    .content p{
+        font-size:1rem;
+    }
+    .content button{
+       font-size:1rem;
+        padding:1rem 2rem;
+    }
+    .container .circle{
+        clip-path: circle(550px at right top);
+    }
+}
+@media screen and(max-width:900px){
+    .img_box img{
+        height: 23rem;
+    }
+}
+@media screen and(max-width:768px){
+    .navbar .navlist{
+          display: none;
+          top:0;
+          left:-130%;
+          position: absolute;
+          flex-direction: column;
+          padding:7.1rem 8rem;
+          transition: .5s ease-in-out;
+    }
+    .navbar .icons{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .container .circle{
+        display: none;
+    }
+    .hero{
+        flex-direction: column;
+        margin-top:2.5rem;
+        height:auto;
+    }
+    .content h1{
+        margin-top: 1rem;;
+    }
+    .content p{
+        margin-top:1rem 0;
+    }
+    
+    
+}
+@media screen and(max-width:400px){
+    .img_box img{
+        height: 15rem;
+    }
+    .navbar .logo{
+        font-size: 1.6rem;
+    }
+    .content h3{
+        font-size: .9rem;
+    }
+    .content h1{
+        font-size:2.2rem;
+    }
+    .content p{
+        font-size:.9rem;
+        line-height: 1.5rem;
+    }
+    .content button{
+        padding:.7rem 1.4rem;
+        font-size: .9rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
